@@ -47,7 +47,6 @@ public class Frame1 {
 			}
 		});
 	};
-	
 	public Frame1() {
 		initialize(); //инициализируем выполнение фрейма и его элементов
 	}
@@ -241,3 +240,4 @@ public class Frame1 {
 			else if (form_answer>=0.000000001) {textArea.append("\n" +String.format("%.9f",form_answer)+ " " +name[i]);}
 			}
 		}
+	}
