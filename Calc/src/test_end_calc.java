@@ -11,9 +11,7 @@ import org.junit.runners.Parameterized;
 
 @RunWith(Parameterized.class)
 public class test_end_calc {
-
-	//���������� ����������
-
+	//инициируем переменные
 	int h,w,fps,hours,cam,days;
 	double deep,form,razv,expected_answer;
 	
@@ -29,9 +27,7 @@ public class test_end_calc {
 		this.days = days;
 		this.expected_answer = expected_answer;
 	}
-
-	//������� ���������
-
+	//инируем параметры
 	@Parameterized.Parameters
 	public static Collection<Object[]> numbers(){
 		return Arrays.asList(new Object[][]{
@@ -40,14 +36,11 @@ public class test_end_calc {
 				{320,240,8,6,0.043,1,1,6,7,23967498240D}});
 	}
 	
-
-	//��������� ������������ ���������� � ��������� �����������
-
+	//проверяем соответствие полученных и ожидаемых результатов
 	@Test
 	public final void testEnd_calc() {
 		double delta = 0.0001;
 		double actual_answer = Frame1.end_calc(h,w,deep,fps,form,razv,cam,hours,days);
 		assertEquals(actual_answer,expected_answer,delta);
 	}
-
 }
